@@ -1,0 +1,11 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/ui/styles/MenuStyles.uss?fileID=7433441132597879392&amp;guid=ebab7caf3df1e0441857208cf800cccc&amp;type=3#MenuStyles"/>
+    <ui:VisualElement name="MenuContainer" class="container menuContainer" style="flex-grow: 1; display: none;">
+        <ui:Button text="CreateServer" name="CreateServer" class="button createButton"/>
+        <ui:Button text="Rooms" name="Rooms" class="button"/>
+    </ui:VisualElement>
+    <ui:VisualElement name="RoomList" class="container" style="flex-direction: column; flex-wrap: nowrap; display: flex;">
+        <ui:ScrollView name="RoomList2" focusable="true" class="list"/>
+        <ui:Button text="Button"/>
+    </ui:VisualElement>
+</ui:UXML>

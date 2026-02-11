@@ -1,0 +1,91 @@
+:root {
+}
+
+.container {
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    border-top-width: 1px;
+    border-right-width: 1px;
+    border-bottom-width: 1px;
+    border-left-width: 1px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    background-color: rgb(255, 255, 255);
+    align-self: auto;
+    overflow: visible;
+    flex-grow: 1;
+    display: flex;
+}
+
+.menuContainer {
+}
+
+.button {
+    width: 231px;
+    border-top-width: 1px;
+    border-right-width: 1px;
+    border-bottom-width: 1px;
+    border-left-width: 1px;
+    border-top-left-radius: 11px;
+    border-top-right-radius: 11px;
+    border-bottom-right-radius: 11px;
+    border-bottom-left-radius: 11px;
+    margin-top: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    -unity-font-style: bold;
+    font-size: 17px;
+    background-color: rgb(231, 112, 0);
+}
+
+.createButton {
+    background-color: rgb(103, 193, 204);
+}
+
+.list {
+    background-color: rgba(192, 32, 32, 0);
+    font-size: 51px;
+    -unity-font-style: bold;
+    flex-grow: 0.9;
+    width: 95%;
+    height: auto;
+    align-items: flex-start;
+    justify-content: center;
+    align-self: center;
+    align-content: flex-end;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    flex-shrink: 1;
+}
+
+.roomLabel {
+    font-size: 49px;
+    -unity-font-style: bold;
+    margin-top: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    background-color: rgb(255, 255, 255);
+}
+
+.itemCont {
+    background-color: rgb(192, 192, 192);
+    align-items: center;
+    height: auto;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-right: 10px;
+    margin-left: 10px;
+    border-top-left-radius: 17px;
+    border-top-right-radius: 17px;
+    border-bottom-right-radius: 17px;
+    border-bottom-left-radius: 17px;
+}
+
+.item {
+    font-size: 33px;
+}
