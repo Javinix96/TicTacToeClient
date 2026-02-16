@@ -8,9 +8,10 @@ using UnityEngine;
 
 public class Client
 {
-    private TcpClient client;
+    private TcpClient client = null;
     private string address = "";
     private int port = 0000;
+    private NetworkManager net = NetworkManager.NM;
     public Client(string address, int port)
     {
         this.address = address;
@@ -18,35 +19,25 @@ public class Client
         client = new TcpClient();
     }
 
-    public async Task Start()
+    public async Task StartServer()
     {
-        TCPClientTic.StopPlying += QuitGame;
+        NetworkManager.StopPlying += QuitGame;
         try
         {
             await client.ConnectAsync(address, port);
-            var stream = client.GetStream();
-            int bitesLength = 0;
-            byte[] buffer = new byte[1024];
-            List<byte> rr = new List<byte>();
-            rr.AddRange(BitConverter.GetBytes(1));
-            rr.AddRange(BitConverter.GetBytes(("Hola usuario").Length));
-            rr.AddRange(Encoding.UTF8.GetBytes("Hola usuario"));
-            buffer = rr.ToArray();
-            await stream.WriteAsync(buffer);
+            net.session = new ClientSession(client);
 
-            while ((bitesLength = await stream.ReadAsync(buffer, 0, buffer.Length)) > 0)
+            while ((net.session.bytesRead = await net.session._stream.ReadAsync(net.session._buffer, 0, net.session._buffer.Length)) > 0)
             {
-                if (bitesLength <= 0)
+                if (net.session.bytesRead <= 0)
                     break;
-            }
 
+                net.session.AddBytes();
+            }
         }
         catch (Exception e)
         {
-            Debug.Log(e.Message);
-
-            client.Dispose();
-            client.Close();
+            Debug.Log(e);
         }
         finally
         {

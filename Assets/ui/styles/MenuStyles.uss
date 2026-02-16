@@ -24,7 +24,7 @@
 }
 
 .button {
-    width: 231px;
+    width: 80%;
     border-top-width: 1px;
     border-right-width: 1px;
     border-bottom-width: 1px;
@@ -38,8 +38,9 @@
     margin-bottom: 10px;
     margin-left: 10px;
     -unity-font-style: bold;
-    font-size: 17px;
+    font-size: 19px;
     background-color: rgb(231, 112, 0);
+    height: 58px;
 }
 
 .createButton {
@@ -88,4 +89,119 @@
 
 .item {
     font-size: 33px;
+}
+
+.RoomButtons {
+    flex-grow: 0;
+    flex-direction: column;
+    font-size: 115px;
+    width: 40%;
+    max-width: 125%;
+    min-width: 8%;
+    aspect-ratio: auto;
+    height: 234px;
+    border-top-width: -1px;
+    border-right-width: -1px;
+    border-bottom-width: -1px;
+    border-left-width: -1px;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+    border-bottom-right-radius: 16px;
+    border-bottom-left-radius: 16px;
+    background-color: rgb(90, 23, 140);
+    color: rgb(255, 255, 255);
+    margin-bottom: 46px;
+    margin-right: 71px;
+    margin-left: 52px;
+}
+
+.title {
+    font-size: 35px;
+    -unity-text-align: upper-center;
+    color: rgb(255, 255, 255);
+    margin-top: 22px;
+}
+
+.CreateContainer {
+    justify-content: space-between;
+    align-items: center;
+    align-self: auto;
+    align-content: auto;
+    flex-grow: 1;
+    background-color: rgb(49, 48, 55);
+}
+
+.RomField {
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    width: 90%;
+    align-items: stretch;
+    justify-content: space-between;
+    align-self: center;
+    align-content: stretch;
+    font-size: 22px;
+    -unity-text-align: middle-center;
+    -unity-font-style: bold;
+    color: rgb(255, 255, 255);
+    -unity-text-outline-color: rgb(18, 200, 3);
+    -unity-text-outline-width: 0.2px;
+    height: 82px;
+}
+
+.cretaRoomB {
+    margin-bottom: 19px;
+    border-top-left-radius: 11px;
+    border-top-right-radius: 11px;
+    border-bottom-right-radius: 11px;
+    border-bottom-left-radius: 11px;
+    background-color: rgb(106, 200, 48);
+    -unity-background-image-tint-color: rgb(255, 0, 0);
+    -unity-background-scale-mode: stretch-to-fill;
+    -unity-slice-left: 51;
+    -unity-slice-type: sliced;
+    -unity-slice-scale: 0.7px;
+    -unity-material: url("");
+    border-top-width: 2px;
+    border-right-width: 2px;
+    border-bottom-width: 2px;
+    border-left-width: 2px;
+    border-left-color: rgba(255, 255, 255, 0.47);
+    border-right-color: rgba(255, 255, 255, 0.47);
+    border-top-color: rgba(255, 255, 255, 0.47);
+    border-bottom-color: rgba(255, 255, 255, 0.47);
+    height: 39px;
+    width: 89%;
+    align-self: center;
+    font-size: 34px;
+    color: rgb(255, 255, 255);
+}
+
+.playerContainer {
+    flex-grow: 1;
+    -unity-background-image-tint-color: rgb(0, 255, 8);
+    background-color: rgb(52, 54, 65);
+    justify-content: space-between;
+    align-items: stretch;
+    align-self: auto;
+    align-content: flex-end;
+}
+
+.titlePlayers {
+    -unity-text-align: lower-center;
+    color: rgb(255, 255, 255);
+    font-size: 172px;
+    text-overflow: clip;
+    -unity-font-style: bold;
+    -unity-paragraph-spacing: 0;
+    word-spacing: 0;
+    letter-spacing: 0;
+    text-shadow: 12.7px 8.6px 28.7px rgb(99, 99, 99);
+    margin-top: 83px;
+}
+
+.playerList {
+    flex-grow: 0.7;
 }

@@ -2,10 +2,23 @@
     <Style src="project://database/Assets/ui/styles/MenuStyles.uss?fileID=7433441132597879392&amp;guid=ebab7caf3df1e0441857208cf800cccc&amp;type=3#MenuStyles"/>
     <ui:VisualElement name="MenuContainer" class="container menuContainer" style="flex-grow: 1; display: none;">
         <ui:Button text="CreateServer" name="CreateServer" class="button createButton"/>
-        <ui:Button text="Rooms" name="Rooms" class="button"/>
+        <ui:Button text="Rooms" name="RoomsButton" class="button"/>
     </ui:VisualElement>
-    <ui:VisualElement name="RoomList" class="container" style="flex-direction: column; flex-wrap: nowrap; display: flex;">
-        <ui:ScrollView name="RoomList2" focusable="true" class="list"/>
-        <ui:Button text="Button"/>
+    <ui:VisualElement name="RoomList" class="container" style="flex-direction: column; flex-wrap: nowrap; display: none; align-items: center; justify-content: space-between;">
+        <ui:ScrollView name="RoomList" focusable="true" class="list"/>
+        <ui:VisualElement name="buttonsCont" style="flex-grow: 0.1; flex-direction: row; align-items: auto; justify-content: center; flex-shrink: 2; align-self: flex-end; width: 100%; align-content: auto;">
+            <ui:Button text="CREATE" name="CreateRoom" class="RoomButtons"/>
+            <ui:Button text="JOIN" name="JoinRoom" class="RoomButtons"/>
+        </ui:VisualElement>
+    </ui:VisualElement>
+    <ui:VisualElement name="CreateRoomCont" class="CreatContainer CreateContainer" style="display: flex; opacity: 1; visibility: visible; overflow: visible;">
+        <ui:Label text="Create Room" name="Title" class="title"/>
+        <ui:TextField label="Room Name:" name="NameRoom" vertical-scroller-visibility="Auto" focusable="true" hide-mobile-input="false" usage-hints="-1" multiline="false" auto-correction="false" class="RomField"/>
+        <ui:Button text="Create Room" name="CreateButton" class="cretaRoomB"/>
+    </ui:VisualElement>
+    <ui:VisualElement name="Players" class="playerContainer" style="display: none;">
+        <ui:Label text="Players" name="Title" focusable="true" selectable="true" class="titlePlayers"/>
+        <ui:ScrollView name="Players" class="playerList"/>
+        <ui:Button text="PLAY" name="PlayButton" style="background-color: rgb(44, 94, 36); width: 89%; height: 150px; font-size: 91px; color: rgb(255, 255, 255); -unity-font-style: bold; align-self: center; border-top-left-radius: 53px; border-top-right-radius: 53px; border-bottom-right-radius: 53px; border-bottom-left-radius: 53px; margin-bottom: 36px;"/>
     </ui:VisualElement>
 </ui:UXML>
