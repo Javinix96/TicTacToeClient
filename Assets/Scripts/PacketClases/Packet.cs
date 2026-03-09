@@ -167,7 +167,7 @@ public class Packet : IDisposable
     public void Reset()
     {
         bufferList?.Clear();
-        bufferList = null;
+        bufferList = new List<byte>();
         bufferArray = null;
         readPos = 0;
     }

@@ -4,39 +4,57 @@ using System.Threading.Tasks;
 using UnityEngine;
 
 
-public class ClientSession
+public class ClientSession : ISession
 {
     TcpClient _client = null;
     private Packet pck;
-    public NetworkStream _stream = null;
-    public int _id = 0;
-    public byte[] _buffer = null;
-    public int bytesRead = 0;
-    public int bytesTotalRead = 0;
+    private PacketRouter _router;
+    private NetworkStream _stream = null;
+    private int _id;
+    private byte[] _buffer = null;
+    private int _bytesRead = 0;
+    private int _bytesTotalRead = 0;
 
-    public ClientSession(TcpClient client)
+    public NetworkStream Stream { get => _stream; }
+    public int Id { get => _id; set => _id = value; }
+    public byte[] Buffer { get => _buffer; set => _buffer = value; }
+    public int BytesRead { get => _bytesRead; set => _bytesRead = value; }
+    public int BytesTotalRead { get => _bytesTotalRead; set => _bytesTotalRead = value; }
+
+    public event Action<int> SetId;
+    public event Action<RoomInfoDTO> OnRoomsReceived;
+
+    public void Initilize(TcpClient client, PacketRouter router)
     {
+        _client = client;
         _stream = client.GetStream();
         _buffer = new byte[1024];
         pck = new Packet();
+        _router = router;
+        _stream.WriteAsync(BitConverter.GetBytes(2233223));
     }
 
 
-    public void AddBytes()
+    public void ProccessData()
     {
-        bytesTotalRead += bytesRead;
-        byte[] data = new byte[bytesRead];
+        _bytesTotalRead += _bytesRead;
+        byte[] data = new byte[_bytesRead];
 
-        Array.Copy(_buffer, data, bytesRead);
-        pck.SetBytes(data);
+        Array.Copy(_buffer, data, _bytesRead);
+        pck.WriteBytes(data);
 
         if (pck.GetBytesArray().Length < 4)
             return;
 
-        int lengthData = pck.ReadInt();
+        int lengthData = pck.ReadInt(false);
 
         if (lengthData <= 0)
-            pck.Dispose();
+            return;
+
+        // if (lengthData != (pck.UnreadLength() - 4))
+        //     return;
+
+        lengthData = pck.ReadInt();
 
 
         while (lengthData > 0 && lengthData <= pck.UnreadLength())
@@ -44,20 +62,10 @@ public class ClientSession
             var data2 = pck.ReadBytes(lengthData);
             using (Packet pck = new Packet(data2))
             {
-                //Recibimos los paquetes y hacermos la logica
+                //Recibimos los paquetes y hacemos la logica
                 int id = pck.ReadInt();
-
-                if (NetworkManager.NM._packetHandler.packetHandlers.TryGetValue(id, out var welcome))
-                {
-                    Packet pckTemp = pck.Copy();
-
-                    MainThreadDispatcher.MD.Enqueue(() =>
-                    {
-                        welcome(pckTemp);
-
-                    });
-                }
-
+                Packet pckTemp = pck.Copy();
+                _router.Route((int)id, pckTemp, this);
             }
 
             if (pck.UnreadLength() >= 4)
@@ -71,7 +79,6 @@ public class ClientSession
                 continue;
             }
 
-            pck.Dispose();
             ClearBuffer();
             break;
         }
@@ -81,38 +88,15 @@ public class ClientSession
     {
         pck = new Packet();
         _buffer = new byte[1024];
-        bytesTotalRead = 0;
-        bytesRead = 0;
-        pck.Dispose();
-    }
-
-    public void ProccessData()
-    {
-        if (_buffer == null)
-            return;
-        if (_buffer.Length <= 0)
-            return;
-        if (_stream == null)
-            return;
-        if (bytesRead <= 0)
-            return;
-
-        byte[] data = new byte[bytesRead];
-        for (int i = 0; i < bytesRead; i++)
-            data[i] = _buffer[i];
-
-        using (Packet pck = new Packet(data))
-        {
-            Console.WriteLine("id: " + pck.ReadInt());
-            Console.WriteLine("Lenght: " + pck.ReadInt(false));
-            Console.WriteLine("string: " + pck.ReadString());
-        }
-
-        _buffer = new byte[1024];
+        _bytesTotalRead = 0;
+        _bytesRead = 0;
+        // pck.Reset();
     }
 
     public void Close()
     {
+        if (_client == null)
+            return;
         _client.Dispose();
         _client.Close();
     }
@@ -133,5 +117,23 @@ public class ClientSession
     {
         await _stream.WriteAsync(pck.GetBytesArray(), 0, pck.GetBytesArray().Length);
 
+    }
+
+    void SetIdUI(int i)
+    {
+        SetId?.Invoke(i);
+    }
+
+    void ISession.SetIdUI(int i)
+    {
+        SetIdUI(i);
+    }
+
+    public void send(Packet packet)
+    {
+        if (_stream == null)
+            return;
+
+        _stream.Write(packet.GetBytesArray(), 0, packet.GetBytesArray().Length);
     }
 }

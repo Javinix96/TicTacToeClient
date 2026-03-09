@@ -34,8 +34,8 @@ public class MainThreadDispatcher : MonoBehaviour
 
     private void Update()
     {
-        while (_queue.TryDequeue(out var action))
-            action?.Invoke();
+        // while (_queue.TryDequeue(out var action))
+        //     action?.Invoke();
     }
 
 }

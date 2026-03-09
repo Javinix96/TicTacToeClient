@@ -4,39 +4,59 @@ using UnityEngine;
 
 public class NetworkManager : MonoBehaviour
 {
-    public static NetworkManager NM { private set; get; }
-
-    public PacketDispatcher _packetHandler { private set; get; }
-
-    public ClientSession session = null;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    public static Action<UnityEditor.PlayModeStateChange> StopPlying;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    private INetworking _netClient = null;
+    private ISession _session = null;
+    private PacketRouter _packetRouter = null;
+#if UNITY_EDITOR
+    public static Action<UnityEditor.PlayModeStateChange> StopPlaying;
+#endif
     void OnEnable()
     {
-        var client = new Client("localhost", 7777);
-        _ = client.StartServer();
-        UnityEditor.EditorApplication.playModeStateChanged += StopPlying;
-        _packetHandler = new PacketDispatcher();
-        _packetHandler.Init();
-        DontDestroyOnLoad(this);
+#if UNITY_EDITOR
+        UnityEditor.EditorApplication.playModeStateChanged += StopPlaying;
+#endif
     }
 
     void Awake()
     {
-        if (NM != null && NM != this)
+        _session = new ClientSession();
+        RoomService roomService = new RoomService(_session);
+        var packetHandlers = new IPacketHandler[]
         {
-            Destroy(gameObject);
-            return;
-        }
+            new Welcome(),
+            new RoomsHandler(roomService),
+            new Message(roomService),
+            new JoinRoom(roomService)
+        };
 
-        NM = this;
+        _packetRouter = new(packetHandlers);
+        _netClient = new ClientTCP();
+
+        _netClient.Connect("localhost", 7777, _session, _packetRouter);
+        // _netClient.Connect("168.220.91.181", 7777, _session, _packetRouter);
+
+        var ui = FindAnyObjectByType<MenuUI>();
+        ui.Init(_session, roomService);
+
+#if UNITY_EDITOR
+        StopPlaying += Stop;
+#endif
     }
 
-    void Start()
+#if UNITY_EDITOR
+    private void Stop(UnityEditor.PlayModeStateChange change)
     {
-        if (session == null)
-            return;
-
+        if (change == UnityEditor.PlayModeStateChange.ExitingPlayMode)
+            if (_session != null)
+                _session.Close();
     }
+#endif
+
+    void OnApplicationQuit()
+    {
+        if (_session != null)
+            _session.Close();
+    }
+
+
 }
