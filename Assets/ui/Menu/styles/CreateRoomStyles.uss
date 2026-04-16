@@ -1,0 +1,175 @@
+.container {
+    background-color: rgb(11, 18, 32);
+    justify-content: center;
+    height: 100%;
+    flex-grow: 1;
+    background-image: url("project://database/Assets/Imgs/Tablero%20futurista%20de%20tic-tac-toe.png?fileID=-1009002845499871143&guid=ac926d1156de47f4e84a9836f5ddbe0b&type=3#Tablero futurista de tic-tac-toe_0");
+}
+
+.background {
+    width: 100%;
+    height: 60%;
+    align-self: center;
+    margin: 0;
+    padding: 0;
+    background-image: url("project://database/Assets/Imgs/Panel.png?fileID=2800000&guid=ac3bd113b4e45154c93414a7d5a7ea1b&type=3#Panel");
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+
+.input{
+    flex-direction: column;
+    width: 80%;
+    height: 20%;
+    justify-content: center;
+    margin-top: 5px;
+}
+
+.password{
+    margin-top: -10px;
+    height: 20%;
+}
+
+Label{
+    color: #5fb9ff;
+    box-shadow: 0 0 4px rgba(0, 200, 255, 0.3);
+    font-transform: uppercase;
+}
+
+.toggle{
+    flex-direction: row ;
+    width: 80%;
+    height:9%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.toggle Toggle {
+    width: 50px;
+    height: 80%;
+}
+
+ .toggle Toggle VisualElement  {
+    background-color: rgba(0, 150, 255, 0.15);
+    border-radius: 12px;
+    border: 1px solid rgba(0, 200, 255, 0.4);
+    transition: all 0.2s;
+} 
+
+#unity-checkmark {
+    width: 17px;
+    height: 17px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 50%;
+    margin-left: 2px;
+    transition: all 0.2s;
+} 
+
+.toggle Toggle:checked VisualElement {
+    background-color: rgba(0, 209, 35, 0.25);
+    border: 1px solid #00ffaa;
+}
+
+.toggle Toggle:checked VisualElement VisualElement {
+    translate: 30px 0;
+    background-color: #00ffaa;
+    font-color: #00e5ff;
+    background-image: none;
+}
+
+
+.input  TextInput {
+    border: 10px solid #00e5ff;
+    color: white;
+    overflow: visible;
+    white-space: nowrap;
+    border-radius: 5px;
+    font-size: 12px;
+    padding: 5px;
+    background-color: rgba(20, 30, 50,0.9);
+    border-top-width: 1px;
+    border-bottom-width: 1px;
+    border-left-width: 1px;
+    border-right-width: 1px;
+    border-top-color: #064bb9;
+    border-bottom-color: #064bb9;
+    border-left-color: #064bb9;
+    border-right-color: #064bb9;
+}
+
+
+.slider{
+    flex-direction: column;
+    width: 80%;
+    margin-top: 5px;
+}
+
+.text-slider{
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.text-slider Label{
+    font-size: 12px;
+    color: #5fb9ff;
+    font-transform: uppercase;
+}
+
+.buttons{
+    flex-direction: row;
+    justify-content: space-around;
+    width: 85%;
+    margin-bottom: 8px;
+}
+
+.buttons Button {
+    width: 100px;
+    height: 20px;
+    border-radius: 7px;
+    border: 1px solid rgba(0, 200, 255, 0.4);
+    color: white;
+    font-transform: uppercase;
+    transition: all 0.2s;
+    font-size: 12px;
+    font-weight: bold;
+    
+    border-color: rgb(221, 255, 223);
+    unity-background-scale-mode: stretch-to-fill;
+}   
+
+.red{
+    background-image: url("project://database/Assets/Imgs/toggle_gradient_red_vertical.png");
+}
+
+.red:hover{
+   unity-background-image-tint-color: #ffffff;
+}
+
+.green{
+    -unity-background-image-tint-color: rgb(40, 241, 55);
+    background-image: url("project://database/Assets/Imgs/toggle_gradient.png");
+}
+.slider-item VisualElement > * > .unity-base-slider__tracker {
+    background-color: rgba(8, 115, 193, 0.15);
+    height: 70%;
+    border-radius: 10px;
+}
+
+.slider-item VisualElement > * > .unity-base-slider__dragger {
+    background-color: rgba(255, 255, 255, 0.9);
+    width: 25px;
+    height: 25px;
+    border-radius: 50px;
+    margin-top: -7px;
+    border: 1px solid rgba(255, 255, 255, 0.9);
+}
+
+.slider-item:focus VisualElement > * > .unity-base-slider__dragger {
+    border: 0px solid rgba(255, 255, 255, 0.9);
+}
+
+
+

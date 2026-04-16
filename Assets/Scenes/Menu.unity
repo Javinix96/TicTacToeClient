@@ -129,7 +129,8 @@ GameObject:
   m_Component:
   - component: {fileID: 57337213}
   - component: {fileID: 57337212}
-  - component: {fileID: 57337214}
+  - component: {fileID: 57337215}
+  - component: {fileID: 57337216}
   m_Layer: 0
   m_Name: UI
   m_TagString: Untagged
@@ -149,9 +150,9 @@ MonoBehaviour:
   m_Script: {fileID: 19102, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.dll::UnityEngine.UIElements.UIDocument
-  m_PanelSettings: {fileID: 11400000, guid: c0d30f4ab6b7461488bbc19f78f5ba26, type: 2}
+  m_PanelSettings: {fileID: 11400000, guid: 3da3c8cdfe910e94296fc8cbbd3d9dbc, type: 2}
   m_ParentUI: {fileID: 0}
-  sourceAsset: {fileID: 9197481963319205126, guid: a2b648f8e20175b47ba350e6aec7ab3b, type: 3}
+  sourceAsset: {fileID: 9197481963319205126, guid: 48b91e823c37009469be78e12ad6ce10, type: 3}
   m_SortingOrder: 0
   m_Position: 0
   m_WorldSpaceSizeMode: 1
@@ -171,11 +172,11 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &57337214
+--- !u!114 &57337215
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -184,10 +185,27 @@ MonoBehaviour:
   m_GameObject: {fileID: 57337211}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 38bfd997320827e469ae113bbefad92f, type: 3}
+  m_Script: {fileID: 11500000, guid: f6e0f373615af7d47b48f3b83fcaefff, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::MenuUI
-  _rooms: []
+  m_EditorClassIdentifier: Assembly-CSharp::PopUpController
+  popupTemplate: {fileID: 9197481963319205126, guid: 4cc7c054279ca4c42889682a399e02da, type: 3}
+--- !u!114 &57337216
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 57337211}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cccec5ec0ce9c874ab151687117a6e64, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UIManager
+  mainMenu: {fileID: 9197481963319205126, guid: 8de7d96aaf3d0474482b0d2e5a60ed75, type: 3}
+  roomList: {fileID: 9197481963319205126, guid: 3142cce6e760ba8449a47f160a026978, type: 3}
+  createRoom: {fileID: 9197481963319205126, guid: 09428a991472c034c80c4fe04e93d2a0, type: 3}
+  joinRoom: {fileID: 9197481963319205126, guid: 804e306fef4fadb42952a388bc055254, type: 3}
+  playerItem: {fileID: 9197481963319205126, guid: 7350030c38e37c945ab2b0324eca3835, type: 3}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -464,7 +482,7 @@ GameObject:
   - component: {fileID: 1942495261}
   - component: {fileID: 1942495262}
   m_Layer: 0
-  m_Name: Client
+  m_Name: NetworkManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -497,12 +515,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e5de8f903794064bbbdd8c07e51312a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NetworkManager
+  popUpController: {fileID: 57337215}
+  _uiManager: {fileID: 57337216}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
-  - {fileID: 519420032}
   - {fileID: 619394802}
   - {fileID: 57337213}
   - {fileID: 1942495261}
   - {fileID: 1293134067}
+  - {fileID: 519420032}

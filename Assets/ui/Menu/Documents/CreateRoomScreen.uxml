@@ -1,0 +1,30 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/ui/Menu/styles/CreateRoomStyles.uss?fileID=7433441132597879392&amp;guid=52b5d1edf2b1b294f995b6c4a7145b49&amp;type=3#CreateRoomStyles"/>
+    <ui:VisualElement name="CreateRoomScreen" class="container">
+        <ui:VisualElement name="Background" class="background" style="display: flex;">
+            <ui:VisualElement name="RoomName" class="input">
+                <ui:Label text="RoomName"/>
+                <ui:TextField placeholder-text="Nombre de la sala" name="RoomName"/>
+            </ui:VisualElement>
+            <ui:VisualElement name="Toggle" class="toggle">
+                <ui:Label text="Privada" class="input-label"/>
+                <ui:Toggle name="PrivateToggle"/>
+            </ui:VisualElement>
+            <ui:VisualElement name="Password" class="input password">
+                <ui:Label text="Contraseña"/>
+                <ui:TextField placeholder-text="filler text" name="Password"/>
+            </ui:VisualElement>
+            <ui:VisualElement name="Slide" class="slider">
+                <ui:VisualElement name="Text" class="text-slider">
+                    <ui:Label text="Tiempo por turno" class="input-label"/>
+                    <ui:Label name="timeTxt" text="60 segundos" class="input-label"/>
+                </ui:VisualElement>
+                <ui:Slider value="42" high-value="30" name="TurnTimer" low-value="5" fill="false" class="slider-item"/>
+            </ui:VisualElement>
+            <ui:VisualElement name="Buttons" class="buttons">
+                <ui:Button text="CANCEL" name="Cancel" class="red"/>
+                <ui:Button text="CREAR ROOM" name="CreateRoom" class="green"/>
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

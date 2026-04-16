@@ -1,0 +1,105 @@
+.container {
+    background-color: rgb(11, 18, 32);
+    padding: 12px;
+    flex-grow: 1;
+    width: 100%;
+    background-image: url("project://database/Assets/Imgs/BackGround.png?fileID=-1009002845499871143&guid=ac926d1156de47f4e84a9836f5ddbe0b&type=3#Tablero futurista de tic-tac-toe_0");
+}
+
+.header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    align-items: center;
+    height: 20%;
+}
+
+.title {
+    font-size: 18px;
+    color: white;
+    unity-font-style: bold;
+    align-self: center;
+    text-align: center;
+}
+
+.btn-exit {
+    background-color: rgb(255, 77, 77);
+    color: white;
+    border-radius: 8px;
+    /* padding: 6px 12px; */
+    width: 30%;
+    height: 60%;
+    align-self: center;
+}
+
+.section {
+    background-color: rgba(18, 26, 46,0.9);
+    border-radius: 12px;
+    padding: 5px;
+    margin-bottom: 10px;
+    height: 85%;
+    border-width: 1px;
+    border-color: rgba(255, 255, 255,0.1);
+    padding: 10px;
+    background-image: url("project://database/Assets/Imgs/Panel.png?fileID=2800000&guid=ac3bd113b4e45154c93414a7d5a7ea1b&type=3#Panel");
+}
+
+.section-title {
+    color: rgb(110, 168, 255);
+    margin-bottom: 6px;
+    unity-font-style: bold;
+}
+
+.room-list {
+    height: 200px;
+}
+
+.room-item {
+    background-color: rgb(26, 36, 64);
+    margin-bottom: 6px;
+    padding: 8px;
+    border-radius: 8px;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.room-name {
+    color: white;
+}
+
+.room-status {
+    color: rgb(0, 255, 153);
+}
+
+.info {
+    height: 60%;
+    overflow: hidden;
+
+}
+
+.info Label{
+    color: rgb(207, 216, 255);
+    margin-bottom: 1px;
+    padding: 2px;
+    font-size: 10px;
+}
+
+.bottom {
+    margin-top: auto;
+}
+
+.btn-create {
+    background-color: rgb(45, 108, 223);
+    color: white;
+    height: 18%;
+    margin-bottom: 6px;
+    border-radius: 10px;
+}
+
+.btn-join {
+    background-color: rgb(46, 204, 113);
+    color: white;
+    height: 18%;
+    border-radius: 10px;
+}

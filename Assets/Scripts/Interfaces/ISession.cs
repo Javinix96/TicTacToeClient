@@ -10,6 +10,10 @@ public interface ISession
     int BytesRead { get; set; }
     int BytesTotalRead { get; set; }
 
+    int RoomID { get; set; }
+
+    string Who { get; set; }
+
     event Action<int> SetId;
 
     event Action<RoomInfoDTO> OnRoomsReceived;
@@ -23,4 +27,6 @@ public interface ISession
     void Close();
 
     void SetIdUI(int i);
+
+    int GetRoomID();
 }

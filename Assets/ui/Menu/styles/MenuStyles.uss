@@ -1,0 +1,310 @@
+:root {
+}
+
+.container {
+    justify-content: center;
+    align-content: auto;
+    align-items: center;
+    border-top-width: 1px;
+    border-right-width: 1px;
+    border-bottom-width: 1px;
+    border-left-width: 1px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    background-color: rgb(255, 255, 255);
+    align-self: auto;
+    overflow: visible;
+    flex-grow: 1;
+    display: flex;
+}
+
+.menuContainer {
+}
+
+.button {
+    width: 80%;
+    border-top-width: 1px;
+    border-right-width: 1px;
+    border-bottom-width: 1px;
+    border-left-width: 1px;
+    border-top-left-radius: 11px;
+    border-top-right-radius: 11px;
+    border-bottom-right-radius: 11px;
+    border-bottom-left-radius: 11px;
+    margin-top: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    -unity-font-style: bold;
+    font-size: 24px;
+    background-color: rgb(231, 112, 0);
+    height: 10%;
+}
+
+.createButton {
+    background-color: rgb(103, 193, 204);
+}
+
+.list {
+    font-size: 51px;
+    -unity-font-style: bold;
+    flex-grow: 0.9;
+    width: 95%;
+    height: 70%;
+    align-items: flex-start;
+    justify-content: center;
+    align-self: center;
+    align-content: flex-end;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    flex-shrink: 1;
+    margin-top: 23px;
+}
+
+.roomLabel {
+    font-size: 49px;
+    -unity-font-style: bold;
+    margin-top: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    background-color: rgb(255, 255, 255);
+}
+
+.itemCont {
+    background-color: rgb(192, 192, 192);
+    align-items: center;
+    height: 84%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-right: 2px;
+    margin-left: 10px;
+    border-top-left-radius: 17px;
+    border-top-right-radius: 17px;
+    border-bottom-right-radius: 17px;
+    border-bottom-left-radius: 17px;
+    width: 94%;
+    min-height: 1%;
+    max-height: 100%;
+}
+
+.item {
+    font-size: 19px;
+}
+
+.RoomButtons {
+    flex-grow: 0;
+    flex-direction: column;
+    font-size: 17px;
+    width: 36%;
+    max-width: 125%;
+    min-width: 8%;
+    aspect-ratio: auto;
+    height: 38px;
+    border-top-width: -1px;
+    border-right-width: -1px;
+    border-bottom-width: -1px;
+    border-left-width: -1px;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+    border-bottom-right-radius: 16px;
+    border-bottom-left-radius: 16px;
+    background-color: rgb(90, 23, 140);
+    color: rgb(255, 255, 255);
+    margin-bottom: 0;
+    margin-right: 0;
+    margin-left: 0;
+}
+
+.title {
+    font-size: 35px;
+    -unity-text-align: upper-center;
+    color: rgb(255, 255, 255);
+    margin-top: 22px;
+}
+
+.CreateContainer {
+    justify-content: space-between;
+    align-items: center;
+    align-self: auto;
+    align-content: auto;
+    flex-grow: 1;
+    background-color: rgb(49, 48, 55);
+}
+
+.RomField {
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    width: 90%;
+    align-items: stretch;
+    justify-content: space-between;
+    align-self: center;
+    align-content: stretch;
+    font-size: 22px;
+    -unity-text-align: middle-center;
+    -unity-font-style: bold;
+    color: rgb(34, 34, 34);
+    -unity-text-outline-color: rgb(18, 200, 3);
+    -unity-text-outline-width: 0.2px;
+    height: 82px;
+}
+
+.createRoomB {
+    margin-bottom: 19px;
+    border-top-left-radius: 11px;
+    border-top-right-radius: 11px;
+    border-bottom-right-radius: 11px;
+    border-bottom-left-radius: 11px;
+    background-color: rgb(106, 200, 48);
+    -unity-background-image-tint-color: rgb(255, 0, 0);
+    -unity-background-scale-mode: stretch-to-fill;
+    -unity-slice-left: 51;
+    -unity-slice-type: sliced;
+    -unity-slice-scale: 0.7px;
+    -unity-material: url("");
+    border-top-width: 2px;
+    border-right-width: 2px;
+    border-bottom-width: 2px;
+    border-left-width: 2px;
+    border-left-color: rgba(255, 255, 255, 0.47);
+    border-right-color: rgba(255, 255, 255, 0.47);
+    border-top-color: rgba(255, 255, 255, 0.47);
+    border-bottom-color: rgba(255, 255, 255, 0.47);
+    height: 39px;
+    width: 89%;
+    align-self: center;
+    font-size: 34px;
+    color: rgb(255, 255, 255);
+}
+
+.playerContainer {
+    flex-grow: 1;
+    -unity-background-image-tint-color: rgb(0, 255, 8);
+    background-color: rgb(52, 54, 65);
+    justify-content: space-between;
+    align-items: stretch;
+    align-self: auto;
+    align-content: flex-end;
+}
+
+.titlePlayers {
+    -unity-text-align: lower-center;
+    color: rgb(255, 255, 255);
+    font-size: 27px;
+    text-overflow: clip;
+    -unity-font-style: bold;
+    -unity-paragraph-spacing: 0;
+    word-spacing: 0;
+    letter-spacing: 0;
+    text-shadow: 12.7px 8.6px 28.7px rgb(99, 99, 99);
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.playerList {
+    flex-grow: 0.7;
+}
+
+.playerCont {
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: rgb(105, 176, 22);
+    width: 80%;
+    align-content: auto;
+    align-self: center;
+    margin-top: 8px;
+    margin-bottom: 5px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.itemCont:focus {
+    background-color: rgb(31, 219, 0);
+}
+
+.headerRoom {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    align-self: auto;
+    width: 100%;
+    align-content: auto;
+    height: 23px;
+    margin-top: 20px;
+}
+
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.card {
+    width: 280px;
+    background-color: rgb(242, 242, 242);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25);
+}
+
+.icon {
+    font-size: 40px;
+    color: white;
+    unity-font-style: bold;
+}
+
+.card-header {
+    height: 120px;
+    background-color: rgb(123, 192, 67);
+    justify-content: center;
+    align-items: center;
+    border-bottom-left-radius: 50% 30%;
+    border-bottom-right-radius: 50% 30%;
+}
+
+.card-body {
+    padding: 20px;
+    align-items: center;
+}
+
+.title {
+    font-size: 18px;
+    unity-font-style: bold;
+    color: rgb(51, 51, 51);
+    margin-bottom: 10px;
+}
+
+.message {
+    font-size: 13px;
+    color: rgb(102, 102, 102);
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.buttonPop {
+    width: 100%;
+    height: 40px;
+    background-color: rgb(123, 192, 67);
+    color: white;
+    border-radius: 20px;
+    unity-font-style: bold;
+}
+
+.buttonPop:hover {
+    background-color: rgb(142, 220, 79);
+}
+
+.lol {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}

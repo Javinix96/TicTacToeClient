@@ -1,0 +1,75 @@
+.container3 {
+    background-color: rgb(11, 18, 32);
+    padding: 12px;
+    justify-content: center;
+    height: 100%;
+    background-image: url("project://database/Assets/Imgs/Tablero%20futurista%20de%20tic-tac-toe.png?fileID=-1009002845499871143&guid=ac926d1156de47f4e84a9836f5ddbe0b&type=3#Tablero futurista de tic-tac-toe_0");
+}
+
+/* .background {
+    position: absolute;
+    background-color: linear-gradient(rgb(79, 172, 254), rgb(0, 242, 254));
+    transition: all 0.2s ease;
+    /* flex-grow: 1; */
+/* }  */
+
+.content {
+    align-items: center;
+    height: 100%; 
+    justify-content: space-evenly;
+}
+
+.title {
+    font-size: 42px;
+    unity-font-style: bold;
+    color: rgb(255, 255, 255);
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.subtitle {
+    font-size: 14px;
+    color: rgb(224, 247, 255);
+    margin-bottom: 20px;
+}
+
+.btn {
+    width: 80%;
+    height: 60px;
+    border-radius: 15px;
+    unity-text-align: middle-center;
+    font-size: 18px;
+    unity-font-style: bold;
+    transition: scale 0.1s;
+}
+
+.btn:hover {
+    scale: 1.05;
+}
+
+.btn-blue {
+    background-color: rgb(62, 193, 211);
+    color: white;
+    box-shadow: 0 6px 0 rgb(42, 157, 173);
+}
+
+.btn-orange {
+    background-color: rgb(255, 122, 0);
+    color: white;
+    box-shadow: 0 6px 0 rgb(204, 98, 0);
+}
+
+.footer {
+    position: absolute;
+    bottom: 20px;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.icon-btn {
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    background-color: rgba(255, 255, 255, 0.2);
+    font-size: 20px;
+    unity-text-align: middle-center;
+}

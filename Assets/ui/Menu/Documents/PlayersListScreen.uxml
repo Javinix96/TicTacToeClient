@@ -1,0 +1,42 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="True">
+    <Style src="project://database/Assets/ui/Menu/styles/PlayersScreenStyles.uss?fileID=7433441132597879392&amp;guid=df5eb5d678ab2344580f5b94edb1dbd1&amp;type=3#PlayersScreenStyles"/>
+    <ui:VisualElement name="BackGround" class="background">
+        <ui:VisualElement name="Title" class="title">
+            <ui:Label text="TIC" name="Tic" class="blue"/>
+            <ui:Label text="TAC" name="Tac" class="white"/>
+            <ui:Label text="TOE" name="Toe" class="red"/>
+        </ui:VisualElement>
+        <ui:VisualElement name="Container" class="container">
+            <ui:VisualElement name="Header" class="header">
+                <ui:Label text="👤" name="Icon"/>
+                <ui:VisualElement name="Texts" class="texts">
+                    <ui:Label text="SALA DE JUGADORES" class="header-txt"/>
+                    <ui:Label text="Espera a que mas jugadores se unan" class="wait-txt"/>
+                </ui:VisualElement>
+                <ui:Button text="✖️" name="Exit"/>
+            </ui:VisualElement>
+            <ui:VisualElement name="PlayerList" class="player-list">
+                <ui:VisualElement name="HeaderList" class="header-list">
+                    <ui:Label text="👤"/>
+                    <ui:Label text="JUGADORES"/>
+                    <ui:Label text="(2/2)"/>
+                </ui:VisualElement>
+                <ui:ScrollView name="Players" class="view-list"/>
+            </ui:VisualElement>
+
+            <ui:VisualElement name="Counter" class="counter">
+                <ui:Label text="⏱️ LA PARTIDA INICIA EN..." class="counter-txt"/>
+                <ui:VisualElement name="Count" class="count">
+                    <ui:Label text="20" class="count-label"/>
+                </ui:VisualElement>
+                <ui:Label text="Preparate para jugar" class="counter-txt"/>
+            </ui:VisualElement>
+
+            <ui:VisualElement name="Buttons" class="buttons">
+                <ui:Button text="▶ UNIRSE A LA PARTIDA" name="Join" class="join-button"/>
+                <ui:Button text="✅ Estoy Listo" name="Ready" class="ready-button"/>
+                <ui:Label text="La partida iniciara cuando termine el contador" class="footer-txt"/>
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

@@ -1,0 +1,189 @@
+:root {
+}
+
+.background {
+    flex-grow: 1;
+    background-image: url("project://database/Assets/Imgs/BackGround.png?fileID=-1009002845499871143&guid=ac926d1156de47f4e84a9836f5ddbe0b&type=3#Tablero futurista de tic-tac-toe_0");
+}
+
+.container {
+    background-color: rgba(13, 29, 62, 0.7);
+    margin-left: 8px;
+    margin-right: 8px;
+    border-radius: 10px;
+    height: 88%;
+    padding: 10px;
+    background-image: url("project://database/Assets/Imgs/Panel.png?fileID=2800000&guid=ac3bd113b4e45154c93414a7d5a7ea1b&type=3#Panel");
+}
+
+.header {
+    border-radius: 10px;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 95%;
+    margin-top: 20px;
+    margin-left: 5px;
+    padding-left: 5px;
+}
+
+.header > Label {
+    color: red;
+    font-size: 20px;
+    font-weight: bold;
+    margin-left: 10px;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+
+}
+
+.texts {
+    flex-direction: column;
+    margin-left: 10px;
+    justify-content: space;
+    flex-grow: 1;
+    margin: 0;
+    padding: 0;
+}
+
+.wait-txt {
+    font-size: 6px;
+    font-weight: normal;
+    color: white;
+    padding: 0;
+}
+
+.header-txt {
+    color: white;
+    font-size: 10px;
+    font-weight: bold;
+    padding: 0;
+    font-style: bold;
+    -unity-font-style: bold;
+}
+
+.header > Button {
+    width: 20px;
+    height: 23px;
+    border-width: 0;
+    background-color: rgba(24, 134, 244,0);
+    color: white;
+    font-size: 20px;
+    border-radius: 2px;
+}
+
+.player-list {
+    margin-top: 10px;
+    background-color: rgba(2, 18, 48, 0.9);
+    border-radius: 10px;
+    height: 23%;
+    margin-left: 20px;
+    margin-right: 20px;
+    overflow: hidden;
+    /* border-radius: 10px;
+    border-width: 0.7px; */
+}
+
+.header-list {
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    height: 22%;
+}
+
+.header-list Label {
+    color: white;
+    font-size: 10px;
+    padding: 0;
+    -unity-font-style: bold;
+}
+
+.player-list > ScrollView {
+    flex-grow: 1;
+}
+
+.title {
+    flex-direction: row;
+    margin-top: 20px;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.title > Label {
+    font-size: 18px;
+    -unity-font-style: bold;
+    padding: 0;
+}
+
+.blue {
+    color: rgb(30, 144, 255);
+}
+
+.white {
+    color: white;
+}
+
+.red {
+    color: rgb(255, 69, 0);
+}
+
+.counter {
+    margin: 10px;
+    background-color: rgba(2, 18, 48, 0.5);
+    border-radius: 10px;
+    /* border-width: 0.8px;
+    border-color: rgba(255, 255, 255,0.1); */
+    height: 30%;
+    justify-content: space-around;
+    flex-grow: 1; 
+} 
+
+.counter-txt{
+    color: white;
+    font-size: 10px;
+    text-align: center;
+    align-self: center;
+}
+
+.count{
+    align-self: center;
+}
+
+.count-label{
+    font-size: 28px;
+    color: white;
+    -unity-font-style: bold;
+}
+
+.join-button{
+    color: white;
+    background-color: rgb(24, 134, 244);
+    border-width: 0;
+    border-radius: 7px;
+    margin-left: 11px;
+    margin-right: 11px;
+    font-size: 10px;
+    width: 84%;
+}
+
+.ready-button{
+    background-color: rgba(188, 188, 188,0.2);
+    border-width: 0;
+    width: 70%;
+    border-radius: 7px;
+    height: 30px;
+    margin-top: 10px;
+    color: white;
+}
+
+.buttons{
+    align-items: center;
+}
+
+.footer-txt{
+    color: white;
+    font-size: 7.5px;
+    margin-bottom: 10px;
+}

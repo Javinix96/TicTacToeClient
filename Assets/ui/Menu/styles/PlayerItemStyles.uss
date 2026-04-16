@@ -1,0 +1,55 @@
+:root {
+}
+
+.container2 {
+    background-color: rgba(16, 28, 65, 0.7);
+    height: 100%;
+    border-radius: 10px;
+    flex-direction: row;
+    align-items: center;
+    justify-Content: space-between;
+    margin-bottom: 2px;
+}
+
+.icon {
+    background-color: rgb(12, 109, 236);
+    width: 10%;
+    height: 60%;
+    border-radius: 30px;
+    align-items: center;
+    justify-Content:center;
+    padding: 0;
+    margin-left: 2px;
+}
+
+.icon Label {
+    color: white;
+    font-size: 16px;
+    padding: 0;
+    margin: 0;
+}
+
+.player-name{
+    color: white;
+    font-size: 16px;
+    flex-grow:1;
+    margin-left: 10px;
+}
+
+.indicator{
+    background-color: rgba(10, 103, 47, 0.8);
+    margin-right: 5px;
+    border-radius: 9px;
+    height: 60%;
+    justify-content: center;
+    align-items:center;
+    padding:0;
+}
+
+.indicator Label{
+    color: rgb(39, 226, 111);
+    font-size: 8px;
+    padding:0;
+    padding-right: 2px;
+    margin:0;
+}

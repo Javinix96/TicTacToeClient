@@ -1,0 +1,12 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="True">
+    <Style src="project://database/Assets/ui/Menu/styles/PlayerItemStyles.uss?fileID=7433441132597879392&amp;guid=004eda7faa4b8db4f95d4fa817d634b2&amp;type=3#PlayerItemStyles"/>
+    <ui:VisualElement name="Container" class="container2">
+        <ui:VisualElement name="Indicator" class="icon">
+            <ui:Label text="✖️" name="tag"/>
+        </ui:VisualElement>
+        <ui:Label text="Player_1" name="PlayerName" class="player-name"/>
+        <ui:VisualElement name="Player" class="indicator">
+            <ui:Label text="⌛ Esperando"/>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>
