@@ -1,0 +1,110 @@
+.background-pop {
+    background-color: rgba(21, 21, 21, 0.2);
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+.pop-up {
+    background-color: rgba(0, 0, 0, 0);
+    height: 50%;
+    width: 80%;
+    border-radius: 15px;
+    overflow: hidden;
+    background-image: url("project://database/Assets/Imgs/PopUpImgs/PopUpPanels.png?fileID=9072009801123861653&guid=499d3d721a0433a48b70e0d5a7b4841f&type=3#PopUp");
+}
+
+.circle {
+    height: 45%;
+    width: 100%;
+    border-bottom-left-radius: 400px;
+    border-bottom-right-radius: 80%;
+    justify-content: center;
+    align-items: center;
+}
+
+.check {
+    background-image: url("project://database/Assets/Imgs/Input.png?fileID=6008857750130988290&guid=981375abf053bab45995938ca0b2b8f0&type=3#Question");
+    width: 40%;
+    height: 60%;
+}
+
+.text-container {
+    flex-grow: 1;
+    justify-content: space-evenly;
+    padding: 10px;
+    width: 100%;
+}
+
+.text-container Label {
+    -unity-text-align: upper-center;
+    font-size: 48px;
+    -unity-font-style: bold;
+    color: rgb(255, 255, 255);
+    justify-content: center;
+    white-space: pre-wrap;
+    margin-right: 36px;
+    margin-left: 38px;
+}
+
+.text-container TextField {
+    height: 24%;
+    width: 85%;
+    color: white;
+    margin-left: 55px;
+    font-size: 28px;
+    background-color: rgba(12, 11, 37, 0.86);
+    background-image: url("project://database/Assets/Imgs/Border.png?fileID=-1238265671906162702&guid=465adcaed3539bf45b5086d834e8173a&type=3#Input");
+}
+
+.text-container TextField > .unity-base-text-field__input {
+    padding: 0;
+    border-radius: 10px;
+    height: 100%;
+    font-size: 26px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0);
+    border-width: 0;
+    margin-left: 20px;
+}
+
+.buttons-container {
+    flex-direction: row;
+    justify-content: center;
+    height: 12%;
+    width: 85%;
+    padding: 5px;
+    margin-left: 40px;
+    margin-bottom: 40px;
+}
+
+.buttons-container Button {
+    width: 46%;
+    font-size: 20px;
+    border-radius: 7px;
+    color: white;
+}
+
+.red {
+    background-color: rgba(0, 0, 0, 0);
+    height: 100%;
+    border-width: 0;
+    background-image: url("project://database/Assets/Imgs/ButtonAnim.png?fileID=1625661827645968720&guid=af3988c10f7816446a3e0aaa78d17655&type=3#Cancel");
+}
+
+.red:hover {
+    background-image: url("project://database/Assets/Imgs/ButtonAnim.png?fileID=-5626887533900812594&guid=af3988c10f7816446a3e0aaa78d17655&type=3#CancelPush");
+}
+
+.green {
+    background-color: rgba(11, 185, 23, 0);
+    border-width: 0;
+    background-image: url("project://database/Assets/Imgs/ButtonAnim.png?fileID=-2416237559307023066&guid=af3988c10f7816446a3e0aaa78d17655&type=3#Accept");
+}
+
+.green:hover {
+    background-image: url("project://database/Assets/Imgs/ButtonAnim.png?fileID=-6208516801338683640&guid=af3988c10f7816446a3e0aaa78d17655&type=3#AcceptPush");
+}

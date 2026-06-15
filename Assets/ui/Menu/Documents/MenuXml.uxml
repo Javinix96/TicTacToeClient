@@ -1,0 +1,34 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/ui/Menu/styles/MenuStyles.uss?fileID=7433441132597879392&amp;guid=ebab7caf3df1e0441857208cf800cccc&amp;type=3#MenuStyles"/>
+    <ui:VisualElement name="Lol" class="lol" style="display: none;"/>
+    <ui:VisualElement name="MenuContainer" class="container menuContainer" style="flex-grow: 1; display: flex; position: relative;">
+        <ui:Button text="SINGLEPLAYER" name="CreateServer" class="button createButton"/>
+        <ui:Button text="ONLINE" name="RoomsButton" class="button"/>
+    </ui:VisualElement>
+    <ui:VisualElement name="RoomList" class="container" style="flex-direction: column; flex-wrap: nowrap; display: none; align-items: center; justify-content: space-between; height: 100%; background-color: rgba(255, 255, 255, 0);">
+        <ui:VisualElement name="HeaderRoom" class="headerRoom">
+            <ui:Label text="ROOM LIST" style="-unity-font-style: bold; font-size: 26px; -unity-text-align: upper-left; text-overflow: ellipsis;"/>
+            <ui:Button text="X" name="ExitOnline" style="height: 43px; flex-wrap: wrap; border-top-left-radius: 22px; border-top-right-radius: 22px; border-bottom-right-radius: 22px; border-bottom-left-radius: 22px; width: 43px; background-color: rgb(190, 46, 57); margin-top: 19px; margin-right: 0; margin-bottom: 0; margin-left: 0;"/>
+        </ui:VisualElement>
+        <ui:ScrollView name="ScrollRoomList" focusable="true" class="list" style="background-color: rgba(0, 0, 0, 0.74);"/>
+        <ui:VisualElement name="buttonsCont" style="flex-grow: 0.1; flex-direction: row; align-items: center; justify-content: space-around; flex-shrink: 2; align-self: center; width: 100%; align-content: auto; height: 8%;">
+            <ui:Button text="CREATE" name="CreateRoom" class="RoomButtons"/>
+            <ui:Button text="JOIN" name="JoinRoom" class="RoomButtons"/>
+        </ui:VisualElement>
+    </ui:VisualElement>
+    <ui:VisualElement name="Players" class="playerContainer" style="display: none;">
+        <ui:VisualElement name="Header" style="flex-grow: 1; flex-direction: row; justify-content: space-around; align-self: auto; align-content: flex-end; width: 100%; height: 10%; min-height: 10%; max-height: 1%; flex-wrap: wrap; margin-top: 32px; align-items: flex-end;">
+            <ui:Label text="Players" name="Title" focusable="true" selectable="true" class="titlePlayers"/>
+            <ui:Button text="X" name="ExitRoom" style="height: 39px; flex-wrap: wrap; border-top-left-radius: 25px; border-top-right-radius: 25px; border-bottom-right-radius: 25px; border-bottom-left-radius: 25px; width: 43px;"/>
+        </ui:VisualElement>
+        <ui:ScrollView name="Players" class="playerList"/>
+        <ui:Label text="0" name="Counter" style="font-size: 40px; -unity-font-style: bold; color: rgb(255, 255, 255); -unity-text-align: upper-center;"/>
+        <ui:Button text="PLAY" name="PlayButton" style="background-color: rgb(44, 94, 36); width: 89%; height: 10%; font-size: 49px; color: rgb(255, 255, 255); -unity-font-style: bold; align-self: center; border-top-left-radius: 10px; border-top-right-radius: 10px; border-bottom-right-radius: 10px; border-bottom-left-radius: 10px; margin-bottom: 36px;"/>
+    </ui:VisualElement>
+    <ui:VisualElement name="CreateRoomCont" class="CreatContainer CreateContainer" style="display: none; opacity: 1; visibility: visible; overflow: visible; justify-content: flex-start;">
+        <ui:Label text="Create Room" name="Title" class="title"/>
+        <ui:TextField label="Room Name:" name="NameRoom" vertical-scroller-visibility="Auto" focusable="true" hide-mobile-input="false" usage-hints="-1" multiline="false" auto-correction="false" class="RomField" style="margin-top: 50px;"/>
+        <ui:Button text="Create Room" name="CreateButton" class="cretaRoomB createRoomB" style="margin-top: 260px;"/>
+        <ui:Button text="Back" name="BackButton" class="createRoomB" style="background-color: rgb(42, 42, 48);"/>
+    </ui:VisualElement>
+</ui:UXML>

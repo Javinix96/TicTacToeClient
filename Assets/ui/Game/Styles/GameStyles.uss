@@ -1,0 +1,159 @@
+.game-container{
+    flex-grow: 1;
+    align-items: center;
+    background-image: url("project://database/Assets/Imgs/BackGround.png#Tablero futurista de tic-tac-toe_0");
+}
+
+.header-title{
+    height: 20%;
+    width: 90%;
+    justify-content: center;
+    align-items: center;
+}
+
+.title{
+    background-image: url("project://database/Assets/Imgs/Game/BoardGame.png#title");
+    width: 85%;
+    height:  60%;
+}
+
+.body{
+    /* background-color: #ffffff; */
+    height: 50%;
+    width: 100%;
+}
+
+.board{
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background-image: url("project://database/Assets/Imgs/Game/BoardGame.png#Board");
+}
+
+.board-game{
+    flex-grow: 1;
+    width: 92%;
+    /* margin-left: 40px; */
+    margin-top: 42px;
+    margin-bottom: 30px;
+    /* margin-right: 40px;  */
+    flex-direction: column;
+    /* overflow: hidden; */
+    justify-content: space-around;
+    align-items: center;
+}
+
+.row{
+    /* height: 33.3%; */
+    width: 100%;
+    flex-direction: row;
+    flex-grow: 1;
+    /* margin-bottom: 12px; */
+}
+
+ .red{
+    /* background-color:red; */
+    margin-left: 15px;
+    margin-right: -10px;
+    margin-top: 20px;
+}
+
+.green{
+    /* background-color:green; */
+    margin-top: 10px;
+
+}
+
+.blue{
+    /* background-color:blue; */
+    margin-left: 5px;
+    margin-top: 20px;
+}
+
+.column{
+    /* width: 33.3%; */
+    flex-grow: 1;
+
+    justify-content: center;
+    align-items: center;
+    margin-right:  -3px;
+}
+
+.turn-container{
+    /* background-color: #d41616; */
+    height: 10%;
+    width: 95%;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.turn-holder{
+    height: 80%;
+    width: 70%;
+    justify-content: center;
+    align-items: center;
+}
+
+.turn{
+    background-image: url("project://database/Assets/Imgs/Game/TurnPanel.png#panel");
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.turn-label{
+    color: white;
+    font-size: 65px;
+    font-weight: bold;
+    text-align: center;
+    -unity-font-definition: url("project://database/Assets/Fonts/Orbitron/Orbitron-VariableFont_wght.ttf");
+}
+
+.backturn{
+    position: absolute;
+    background-color: rgb(12, 13, 34);
+    width: 90%;
+    height: 70%;
+    left: 0;
+}
+
+.exit{
+    background-image: url("project://database/Assets/Imgs/ButtonAnim.png#Close");
+    width: 20%;
+    height: 80%;
+}
+
+.exit:hover{
+    background-image: url("project://database/Assets/Imgs/ButtonAnim.png#ClosePush");
+}
+
+.footer{
+    /* background-color: #d41616; */
+    flex-grow: 1;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.confirm-cont{
+    background-image: url("project://database/Assets/Imgs/Game/Confirm.png#Back");
+    width: 90%;
+    height: 87%;
+    /* justify-content: center; */
+    align-items: center;
+}
+
+.confirm-button{
+    background-image: url("project://database/Assets/Imgs/Game/Confirmbuttons.png#ConfirmPush");
+    /* margin-top: 11%; */
+    width: 100%;
+    height: 100%;
+}
+
+.confirm-button:hover{
+    background-image: url("project://database/Assets/Imgs/Game/Confirmbuttons.png#Confirm");
+}

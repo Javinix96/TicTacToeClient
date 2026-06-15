@@ -1,0 +1,232 @@
+:root {
+}
+
+.background {
+    flex-grow: 1;
+    background-image: url("project://database/Assets/Imgs/BackGround.png?fileID=-1009002845499871143&guid=ac926d1156de47f4e84a9836f5ddbe0b&type=3#Tablero futurista de tic-tac-toe_0");
+}
+
+.container {
+    margin-left: 8px;
+    margin-right: 8px;
+    border-radius: 10px;
+    height: 88%;
+    background-image: url("project://database/Assets/Imgs/Panel.png?fileID=2800000&guid=ac3bd113b4e45154c93414a7d5a7ea1b&type=3#Panel");
+}
+
+.container-elements {
+    width: 80%;
+    margin-left: 85px;
+    margin-top: 11.5%;
+    margin-bottom: 11.5%;
+    flex-grow: 1;
+    padding: 10px;
+    justify-content: space-between;
+}
+
+.main-container {
+    background-color: red;
+    width: 80%;
+}
+
+.header {
+    border-radius: 10px;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    padding-left: 5px;
+    height: 10%;
+}
+
+.header > Label {
+    color: red;
+    font-size: 150px;
+    font-weight: bold;
+    margin-left: 10px;
+    text-align: center;
+    padding: 0;
+    margin-left: -40;
+}
+
+.texts {
+    flex-direction: column;
+    margin-left: 10px;
+    justify-content: space;
+    flex-grow: 1;
+    margin: 0;
+    padding: 0;
+}
+
+.wait-txt {
+    font-size: 44px;
+    font-weight: normal;
+    color: white;
+    padding: 0;
+    white-space: normal;
+}
+
+.header-txt {
+    color: white;
+    font-size: 36px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    padding: 0;
+    font-style: bold;
+    -unity-font-style: bold;
+}
+
+.header > Button {
+    width: 10%;
+    height: 50%;
+    border-width: 0;
+    background-color: rgba(20, 124, 229, 0);
+    color: white;
+    font-size: 80px;
+    border-radius: 2px;
+}
+
+.player-list {
+    margin-top: 10px;
+    background-color: rgba(2, 18, 48, 0.9);
+    border-radius: 10px;
+    height: 28%;
+    margin-left: 2px;
+    margin-right: 2px;
+    overflow: hidden;
+}
+
+.header-list {
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    height: 20%;
+}
+
+.header-list {
+    color: white;
+    font-size: 36px;
+    padding: 0;
+    -unity-font-style: bold;
+}
+
+.icon {
+    font-size: 78px;
+}
+
+.player-list > ScrollView {
+    flex-grow: 1;
+}
+
+.title {
+    flex-direction: row;
+    margin-top: 20px;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 10%;
+}
+
+.title > Label {
+    font-size: 78px;
+    -unity-font-style: bold;
+    padding: 0;
+}
+
+.blue {
+    color: rgb(30, 144, 255);
+}
+
+.white {
+    color: white;
+}
+
+.red {
+    color: rgb(255, 69, 0);
+}
+
+.counter {
+    margin: 10px;
+    background-color: rgba(2, 18, 48, 0.5);
+    border-radius: 10px;
+    height: 40%;
+    justify-content: space-around;
+}
+
+.counter-txt {
+    color: white;
+    font-size: 50px;
+    text-align: center;
+    align-self: center;
+}
+
+.count {
+    align-self: center;
+}
+
+.count-label {
+    font-size: 150px;
+    color: white;
+    -unity-font-style: bold;
+}
+
+.ready-button {
+    background-color: rgba(103, 6, 136, 0.98);
+    border-width: 0;
+    width: 70%;
+    border-radius: 28px;
+    height: 70%;
+    margin-top: 10px;
+    color: white;
+    font-size: 40px;
+}
+
+.buttons {
+    align-items: center;
+}
+
+.footer-txt {
+    color: white;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.view-list >  .unity-scroll-view__content-and-vertical-scroll-container > .unity-scroller--vertical{
+    display:none;
+}
+
+.view-list >  .unity-scroll-view__content-and-vertical-scroll-container > .unity-scroller--vertical > *{
+    display:none;
+}
+
+.square{
+    width: 30%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.sand{
+    background-image: url("project://database/Assets/ui/Menu/svg/sand.svg");
+    width: 70%;
+    height: 80%;
+}
+
+.close-container{
+    width: 30%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.close-img{
+    background-image: url("project://database/Assets/Imgs/ButtonAnim.png#Close");
+    width: 100%;
+    height: 80%;
+}
+
+.close-img:hover{
+    background-image: url("project://database/Assets/Imgs/ButtonAnim.png#ClosePush");
+
+}
+

@@ -1,0 +1,27 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="True">
+    <Style src="project://database/Assets/ui/Menu/styles/RoomLayoutStyles.uss?fileID=7433441132597879392&amp;guid=aae15c9fd353804458e26625f5ec820e&amp;type=3#RoomLayoutStyles"/>
+    <ui:VisualElement name="Container" class="background-container">
+        <ui:VisualElement name="IconContainer" class="icon-container">
+            <ui:VisualElement name="Profile" class="profile-img"/>
+        </ui:VisualElement>
+        <ui:VisualElement name="RoomInfo" class="room-info">
+            <ui:VisualElement name="Host" class="box">
+                <ui:Label text="Name room" name="RoomName" class="info"/>
+            </ui:VisualElement>
+            <ui:VisualElement name="Host" class="box">
+                <ui:Label text="Host: Javinix" name="HostLabel" class="info"/>
+                <ui:VisualElement name="Host" class="icon-host"/>
+            </ui:VisualElement>
+            <ui:VisualElement name="RoomInfo" class="players-cont">
+                <ui:VisualElement name="IconLabel" class="icon-label"/>
+                <ui:VisualElement name="RoomInfo" class="">
+                    <ui:Label text="2/2 jugadores" name="Players" class="info"/>
+                </ui:VisualElement>
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:VisualElement name="MS" class="ms">
+            <ui:Label text=""/>
+        </ui:VisualElement>
+        <ui:VisualElement name="Space" class="arrow"/>
+    </ui:VisualElement>
+</ui:UXML>

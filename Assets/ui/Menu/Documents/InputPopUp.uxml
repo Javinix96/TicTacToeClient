@@ -1,0 +1,18 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="True">
+    <Style src="project://database/Assets/ui/Menu/styles/InputPopUPStyles.uss?fileID=7433441132597879392&amp;guid=472d6c377ee46b841a4237aa1156017b&amp;type=3#InputPopUPStyles"/>
+    <ui:VisualElement name="BackGround" class="background-pop">
+        <ui:VisualElement name="containerPopUp" class="pop-up">
+            <ui:VisualElement name="circle" class="circle">
+                <ui:VisualElement name="circle" class="check" />
+            </ui:VisualElement>
+            <ui:VisualElement name="TextContainer" class="text-container">
+                <ui:Label text="Ingrese la contraseña de la sala ajjaja" name="Message"/>
+                <ui:TextField placeholder-text="Ingrese los datos" name="NameField"/>
+            </ui:VisualElement>
+            <ui:VisualElement name="ButtonsContainer" class="buttons-container">
+                <ui:Button class="red" name="Cancel"/>
+                <ui:Button class="green" name="Ok"/>
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

@@ -1,0 +1,28 @@
+<ui:UXML  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/ui/Menu/styles/RoomListStyles.uss?fileID=7433441132597879392&amp;guid=280f6cd1e4824554e98b0c80be3117b4&amp;type=3#RoomListStyles"/>
+    <ui:VisualElement name="RoomList" class="container">
+        <ui:VisualElement class="header">
+            <ui:Label text="TIC TAC TOE" class="title"/>
+            <ui:VisualElement class="exit-img" name="btnSalir" />
+            <!-- <ui:Button text="SALIR" name="btnSalir" class="btn-exit"/> -->
+        </ui:VisualElement>
+        <ui:VisualElement class="section">
+            <ui:VisualElement class="rooms-container">
+                <ui:Label text="SALAS DISPONIBLES" class="section-title"/>
+                <ui:ScrollView name="roomList" class="room-list"/>
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:VisualElement class="section2 info">
+            <ui:VisualElement class="info-cont">
+                <ui:TextField placeholder-text="Nombre de la sala" name="RoomField" class="search" />
+            </ui:VisualElement>
+            <ui:VisualElement class="icon-cont">
+                <ui:VisualElement class="search-img" name="btnSearch"/>
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:VisualElement class="bottom">
+            <ui:Button name="btnCreate" class="btn-create"/>
+            <ui:Button name="btnJoin" class="btn-join"/>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

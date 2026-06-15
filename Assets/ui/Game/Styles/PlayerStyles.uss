@@ -1,0 +1,7 @@
+
+.img{
+    background-image: url("project://database/Assets/Imgs/Game/Players.png#circle");
+    flex-grow: 1;
+    width: 100%;
+    height: 100%;
+}

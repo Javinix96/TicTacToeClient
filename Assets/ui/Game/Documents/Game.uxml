@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ui:UXML
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ui="UnityEngine.UIElements"
+    xmlns:uie="UnityEditor.UIElements"
+    xsi:noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd">
+    <Style src="project://database/Assets/ui/Game/Styles/GameStyles.uss"/>
+    <ui:VisualElement name="GameContainer" class="game-container">
+        <ui:VisualElement class="header-title">
+            <ui:VisualElement class="title" />
+        </ui:VisualElement>
+        <ui:VisualElement class="turn-container">
+            <ui:VisualElement class="turn-holder">
+                <ui:VisualElement class="backturn" />
+                <ui:VisualElement class="turn">
+                    <ui:Label text="Turno de: X" class="turn-label" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+            <ui:VisualElement class="exit" />
+        </ui:VisualElement>
+        <ui:VisualElement class="body">
+            <ui:VisualElement class="board">
+                <ui:VisualElement class="board-game">
+                    <ui:VisualElement class="row">
+                        <ui:VisualElement name="cell" class="column blue" />
+                        <ui:VisualElement name="cell" class="column red" />
+                        <ui:VisualElement name="cell" class="column blue" />
+                    </ui:VisualElement>
+                    <ui:VisualElement class="row">
+                        <ui:VisualElement name="cell" class="column blue" />
+                        <ui:VisualElement name="cell" class="column red" />
+                        <ui:VisualElement name="cell" class="column blue" />
+                    </ui:VisualElement>
+                    <ui:VisualElement class="row green">
+                        <ui:VisualElement name="cell" class="column blue" />
+                        <ui:VisualElement name="cell" class="column red" />
+                        <ui:VisualElement name="cell" class="column blue" />
+                    </ui:VisualElement>
+                </ui:VisualElement>
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:VisualElement class="footer">
+            <ui:VisualElement class="confirm-cont">
+                <ui:VisualElement class="confirm-button" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

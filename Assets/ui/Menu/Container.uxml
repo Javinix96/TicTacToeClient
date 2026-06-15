@@ -1,0 +1,3 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/ui/Menu/styles/ContainerStyles.uss?fileID=7433441132597879392&amp;guid=cb527ed0dc3b9f948ba4891819304cb0&amp;type=3#ContainerStyles"/>
+</ui:UXML>

@@ -1,0 +1,15 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/ui/Menu/styles/PopUP.uss?fileID=7433441132597879392&amp;guid=a1ee1effd610e0e44aab551822794461&amp;type=3#PopUP"/>
+    <ui:VisualElement name="Overlay" class="overlay" style="display: flex;">
+        <ui:VisualElement name="PopUp" class="card">
+            <ui:VisualElement name="CardHeader" class="card-header">
+                <ui:Label text="✔" class="icon"/>
+            </ui:VisualElement>
+            <ui:VisualElement class="card-body">
+                <ui:Label name="Title" text="Task Completed" class="title"/>
+                <ui:Label name="Message" text="Lorem ipsum dolor sit amet..." class="message"/>
+                <ui:Button name="okButton" text="Close Window" class="buttonPop"/>
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>
